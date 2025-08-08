@@ -27,10 +27,11 @@ Created a NAT Gateway in Public Subnet 1 to allow instances in private subnets t
 
   <img width="720" height="1555" alt="image" src="https://github.com/user-attachments/assets/c5e05e48-e590-4813-9904-b7952d5c5e6a" />
 
-  4. NGINX Reverse Proxy Setup
-Launched EC2 instance in a public subnet.
-Installed NGINX to forward traffic to app instances in private subnets.
-Used as a reverse proxy for routing and load balancing.
+4. NGINX Reverse Proxy Setup
+*Launched EC2 instance in a public subnet.
+*Installed NGINX to forward traffic to app instances in private subnets.
+*Used as a reverse proxy for routing and load balancing.
+
 sudo apt update -y
 sudo apt install nginx -y
 
@@ -68,16 +69,17 @@ Press enter or click to view image in full size
 
   <img width="720" height="383" alt="image" src="https://github.com/user-attachments/assets/d9aa4cc7-2f16-4ccc-9b7f-3b108ca5dd85" />
   
-  6. second Load Balancer and Auto Scaling(Internal)
-This second ALB handles requests within the deeper application layer securely and efficiently.
-In Private Subnet 5 and 6, Auto Scaling was configured for both the application tier and the RDS (using Multi-AZ deployment) to ensure high availability and performance.
+6. second Load Balancer and Auto Scaling(Internal)
+* This second ALB handles requests within the deeper application layer securely and efficiently.
+* In Private Subnet 5 and 6, Auto Scaling was configured for both the application tier and the RDS (using Multi-AZ deployment) to ensure high availability and     performance.
+  
 <img width="720" height="400" alt="image" src="https://github.com/user-attachments/assets/48529199-e9bd-40f9-b6a8-5551adc25f47" />
 <img width="720" height="390" alt="image" src="https://github.com/user-attachments/assets/95d00ab6-2cd5-4c24-8211-6b45d162e7e8" />
 
 7. Backend Application EC2 in (Private Subnet)
-Deployed in private subnet.
-Application was pulled from DockerHub and run as a containerized Node.js app on port 3000.
-Installed mysql-client to allow backend to connect with RDS
+* Deployed in private subnet.
+* Application was pulled from DockerHub and run as a containerized Node.js app on port 3000.
+* Installed mysql-client to allow backend to connect with RDS
 <img width="720" height="354" alt="image" src="https://github.com/user-attachments/assets/dfaed257-b001-4171-8b78-f714c08fc344" />
 <img width="720" height="98" alt="image" src="https://github.com/user-attachments/assets/4d6354c8-452c-4eeb-836a-bea0ce3f1e0d" />
 
@@ -94,10 +96,10 @@ Installed mysql-client to allow backend to connect with RDS
 * Forwarding rules send HTTPS traffic to the target group (NGINX or backend).
 
 10. Testing and Go Live
-Verified DNS, static and dynamic content access.
-Connected CloudFront and Route 53 with the domain.
-Ensured application runs end-to-end through NGINX → App → DB.
-Press enter or click to view image in full size
+* Verified DNS, static and dynamic content access.
+* Connected CloudFront and Route 53 with the domain.
+* Ensured application runs end-to-end through NGINX → App → DB.
+* Press enter or click to view image in full size
 
 <img width="720" height="378" alt="image" src="https://github.com/user-attachments/assets/d29b8861-33f6-4443-af1f-d79f29b00fc4" />
 <img width="720" height="326" alt="image" src="https://github.com/user-attachments/assets/450dd276-451a-4c5d-a2ee-10ab3fcb6189" />
