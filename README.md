@@ -55,7 +55,7 @@ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 }
 }
 
-Press enter or click to view image in full size
+
 <img width="720" height="411" alt="image" src="https://github.com/user-attachments/assets/1bd04031-2c54-458d-ac70-4042cb3b4f3e" />
 <img width="720" height="370" alt="image" src="https://github.com/user-attachments/assets/9efcfd3c-a0f0-4859-852d-938a808c0590" />
 
